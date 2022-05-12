@@ -1,0 +1,12 @@
+.nav-styling {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-top: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.tweeter-logo {
+  font-family: "Bungee", cursive, sans-serif;
+}
