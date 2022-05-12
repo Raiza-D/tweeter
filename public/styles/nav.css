@@ -1,12 +1,29 @@
-.nav-styling {
+nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding-top: 3em;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
-.tweeter-logo {
+nav > span {
   font-family: "Bungee", cursive, sans-serif;
+  padding-top: 3em;
+}
+
+.right-nav-elem {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.right-nav-elem > span {
+  font-size: 20px;
+}
+
+.right-nav-elem > i {
+  color: red;
 }
