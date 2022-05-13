@@ -19,8 +19,9 @@ form > div {
 textarea {
   resize: none;
   font-size: medium;
-  background-color: #f4f1ec;
+  background-color: transparent;
   border: none;
+  outline: none;
 }
 
 button {
