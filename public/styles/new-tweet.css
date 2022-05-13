@@ -1,0 +1,10 @@
+.form-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: medium;
+  font-weight: bold;
+  text-align: left;
+}
