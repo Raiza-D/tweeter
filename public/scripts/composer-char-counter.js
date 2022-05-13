@@ -1,0 +1,1 @@
+/* This file will be responsible for the character counter feature of our SPA */
