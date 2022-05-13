@@ -22,3 +22,7 @@ button {
   color: #FFFFFF;
   border: 0;
 }
+
+output {
+  font-family: "Bungee", cursive, sans-serif;
+}
