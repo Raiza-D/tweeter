@@ -8,3 +8,8 @@ label {
   font-weight: bold;
   text-align: left;
 }
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
