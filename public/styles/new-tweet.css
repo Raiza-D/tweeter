@@ -12,7 +12,15 @@ label {
 form > div {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  padding-top: 10px;
+  border-top: solid 5px;
+}
+
+textarea {
+  resize: none;
+  font-size: medium;
+  background-color: #f4f1ec;
+  border: none;
 }
 
 button {
