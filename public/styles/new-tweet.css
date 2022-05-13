@@ -13,3 +13,10 @@ form > div {
   display: flex;
   justify-content: space-between;
 }
+
+button {
+  font-family: "Bungee", cursive, sans-serif;
+  font-size: medium;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
