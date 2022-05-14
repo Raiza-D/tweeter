@@ -32,6 +32,8 @@ const onChange = function() {
 -The onChange function above still works even though it is defined after it is passed in as a callback on Lne 6 because the 'composer-char-counter.js' script has already been run when the browser loads the page. Therefore, the lines of code within the onChange function definition have already been run and therefore recognized. THEN after the document object is ready, we run Line 6.
 This is why we don't get a reference error when we've referenced onChange as a function on Line 6.
 
+-The above code is cleaner. In professional practice, the area inside the document.ready is kept to a minimum. All other code is written below/outside of the document.ready. The problem with this however as Gary mentioned, is that the functions defined below document.ready are in global scope and can be accessed (perhaps inadvertently). We don't want that. So then that's why we encapsulated the code in this entire file into an IIFE.
+
 -What if we had used the class 'counter' in other elements of our HTML code? Then the code I had written originally will affect all of the elements with the class 'counter'. We made use of the closest(), find(), and 'this' keyword in Lines 12 and 13 to avoid this issue.
 
 -IIFE (Immediately Invoked Function Expression) approach is applied is when the function is going to be used only ONCE and we want to hide the function and its contents from the global scope so the variable names etc are not interferred with. The variable names can be used again and since the IIFE is an unnamed function, we don't have to worry about not having to accidently use that same name somewhere else in our code.
