@@ -2,10 +2,11 @@
 
 $(document).ready(function() {
   // code goes here
+  let maxLength = 140;
+
   $("textarea").keyup(function() {
-    const characterCount = $(this).val().length,
-      counter = $(".counter");
-  
-  counter.text(characterCount);
+    let length = $(this).val().length;
+    length = maxLength - length;
+    $(".counter").text(length);
   })
 });
