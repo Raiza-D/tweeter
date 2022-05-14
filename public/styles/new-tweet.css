@@ -35,3 +35,7 @@ button {
 output {
   font-family: "Bungee", cursive, sans-serif;
 }
+
+.red {
+  color: #FF0000;
+}
