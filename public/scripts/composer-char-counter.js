@@ -14,7 +14,7 @@ const onChange = function() {
   const counter = form.find(".counter"); // Then within form element, use find() to grab a "counter" class within the form element.
 
   let inputLength = $(this).val().length;
-  
+
   const remainingLength = maxLength - inputLength;
   counter.text(remainingLength); // Use 'counter' variable and update the remaining character length
 
@@ -30,6 +30,8 @@ const onChange = function() {
 
 /* Notes from session with mentor Gary Jipp:
 -The best event to use for the character counter is 'input'. My use of 'keypress' before prevented any mouse 'copy + paste' actions from being recognized by the textarea. So the counter was not affected even though I had values inside the textarea element.
+
+-CSS should handle presentation and style, while JavaScript handles logic and behaviour. In my prior code I was changing css styling for the counter directly. To avoid that, we used the addClass() jQuery function, referenced the class 'red' which we created and set within the new.tweet.css file.
 
 -The onChange function above still works even though it is defined after it is passed in as a callback on Lne 6 because the 'composer-char-counter.js' script has already been run when the browser loads the page. Therefore, the lines of code within the onChange function definition have already been run and therefore recognized. THEN after the document object is ready, we run Line 6.
 This is why we don't get a reference error when we've referenced onChange as a function on Line 6.
