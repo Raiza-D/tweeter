@@ -13,7 +13,7 @@ const onChange = function() {
 
   const counter = form.find(".counter"); // Then within form element, use find() to grab a "counter" class within the form element.
 
-  let inputLength = $(this).val().length;
+  let inputLength = $("textarea").val().length;
 
   const remainingLength = maxLength - inputLength;
   counter.text(remainingLength); // Use 'counter' variable and update the remaining character length
