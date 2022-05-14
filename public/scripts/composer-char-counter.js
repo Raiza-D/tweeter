@@ -10,9 +10,11 @@ const onChange = function() {
   const maxLength = 140;
 
   const form = $(this).closest("form"); // Traverse up the DOM tree using closest() and find "form" element. The 'this' refers to the form.
+
   const counter = form.find(".counter"); // Then within form element, use find() to grab a "counter" class within the form element.
 
   let inputLength = $(this).val().length;
+  
   const remainingLength = maxLength - inputLength;
   counter.text(remainingLength); // Use 'counter' variable and update the remaining character length
 
