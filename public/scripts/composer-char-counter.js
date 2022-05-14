@@ -2,5 +2,10 @@
 
 $(document).ready(function() {
   // code goes here
-  console.log("Hello, testing this file!");
+  $("textarea").keyup(function() {
+    const characterCount = $(this).val().length,
+      counter = $(".counter");
+  
+  counter.text(characterCount);
+  })
 });
