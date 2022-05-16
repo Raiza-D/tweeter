@@ -4,6 +4,11 @@
   align-items: flex-start;
   border: 5px solid;
   padding: 20px;
+  margin-bottom: 30px;
+}
+
+article:hover {
+  box-shadow: 5px 5px 5px #9494a9;
 }
 
 .inner-header {
