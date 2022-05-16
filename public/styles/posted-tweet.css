@@ -9,6 +9,7 @@
 .inner-header {
   display: flex;
   width: 100%;
+  padding: 10px;
 }
 
 .inner-header > span {
@@ -21,8 +22,17 @@
   width: 100%;
 }
 
-p {
+.article-body {
   border-bottom: 5px solid;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.article-body p {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .article-footer {
@@ -30,4 +40,5 @@ p {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 10px;
 }
