@@ -22,10 +22,6 @@ article:hover {
   height: auto;
 }
 
-.inner-header > span {
-  margin-right: 15px;
-}
-
 .name-handle {
   display: flex;
   justify-content: space-between;
