@@ -20,7 +20,29 @@ const tweetData = {
 
 
 const createTweetElement = function(tweet) {
-  let $tweet = 
+  let $tweet =
+  `<article class="tweet-container">
+    <header class="inner-header">
+      <img src=${tweet.user.avatars}>
+      <div class="name-handle">
+        <span>${tweet.user.name}</span>
+        <a href="#">${tweet.user.handle}</a>
+      </div>
+    </header>
+
+    <section class="article-body">
+      <p>${tweet.content.text}</p>
+    </section>
+    
+    <footer class="article-footer">
+      <span>${tweet.created_at}</span>
+      <div>
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+      </div>
+    </footer>
+  </article>`;
 
   return $tweet;
 };
