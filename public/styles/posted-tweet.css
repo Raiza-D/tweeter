@@ -47,3 +47,18 @@ article:hover {
   width: 100%;
   padding: 10px;
 }
+
+.fa-flag:hover {
+  color:#c9b940;
+  cursor: pointer;
+}
+
+.fa-retweet:hover {
+  color:#c9b940;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  color:#c9b940;
+  cursor: pointer;
+}
