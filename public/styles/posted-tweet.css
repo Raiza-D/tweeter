@@ -17,6 +17,11 @@ article:hover {
   padding: 10px;
 }
 
+.inner-header img {
+  padding-top: 0px;
+  height: auto;
+}
+
 .inner-header > span {
   margin-right: 15px;
 }
@@ -24,6 +29,7 @@ article:hover {
 .name-handle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
