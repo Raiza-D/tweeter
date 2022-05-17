@@ -30,6 +30,15 @@ article:hover {
   width: 100%;
 }
 
+.name-handle a {
+  text-decoration: none;
+  color: #b6b5b2;
+}
+
+.tweet-container:hover .name-handle a {
+  color: #9494a9;
+}
+
 .article-body {
   border-bottom: 5px solid;
   width: 100%;
