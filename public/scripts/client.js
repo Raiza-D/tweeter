@@ -47,7 +47,12 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-const $tweet = createTweetElement(tweetData);
+// const $tweet = createTweetElement(tweetData);
+
+const renderTweets = function(tweets) {
+
+};
+
 
 console.log($tweet); // to see what it looks like
 $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
