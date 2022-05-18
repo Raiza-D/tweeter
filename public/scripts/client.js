@@ -88,6 +88,13 @@ $(document).ready(function() {
       })
     })
 
+  const loadTweets = function() {
+    $.get("http://localhost:8080/tweets", function(data) {
+      renderTweets(data);
+    });
+  }
+  loadTweets();
+
 });
 
 /* Notes from mentor session:
