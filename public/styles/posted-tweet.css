@@ -53,11 +53,15 @@ article:hover {
 }
 
 .article-footer {
-  font-size: small;
+  font-size: medium;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+}
+
+footer > p {
+  margin: 0;
 }
 
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
