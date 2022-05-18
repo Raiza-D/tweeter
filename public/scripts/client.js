@@ -81,10 +81,15 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     alert("form submitted!");
-  })
+    const textAreaData = $(this).serialize();
+
+    $.post("http://localhost:8080/tweets", textAreaData)
+       .then(result => {
+      })
+    })
+
 });
 
 /* Notes from mentor session:
 -Placement of createTweetElement function above/before the renderTweets function makese more sense sequentially. renderTweets calls createTweetElement. Therefore, better to place createTweetElement before renderTweets. Compass shows renderTweets placed before createTweetElement.
-In terms of behaviour, the output on our page looks the same. The concept of hoisting is applied. That's why renderTweets being placed before createTweetElement still gives the same output, no break in the code. The function definitions are hoisted. So by the time,, the renderTweets function and the createTweetElement are invoked, the program has already seen the two functions and what they're both supposed to do.
-*/
+In terms of behaviour, the output on our page looks the same. The concept of hoisting is applied. That's why renderTweets being placed before createTweetElement still gives the same output, no break in the code. The function definitions are hoisted. So by the time,, the renderTweets function and the createTweetElement are invoked, the program has already seen the two functions and what they're both supposed to do.*/
