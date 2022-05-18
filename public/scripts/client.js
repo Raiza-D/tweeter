@@ -28,10 +28,22 @@ $(document).ready(function() {
       },
       created_at: 1652740402002,
     },
+    {
+      user: {
+        name: "Theodore",
+        avatars: "https://i.imgur.com/73hZDYK.png",
+        handle: "@theo",
+      },
+      content: {
+        text: "Much ado about nothing",
+      },
+      created_at: 1652740402002,
+    },
   ];
 
-  const createTweetElement = function (tweet) {
-    let $tweet = `<article class="tweet-container">
+  const createTweetElement = function(tweet) {
+    let $tweet =
+    `<article class="tweet-container">
       <header class="inner-header">
         <img src=${tweet.user.avatars}>
         <div class="name-handle">
@@ -62,7 +74,6 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").append($tweet);
     }
-    return tweets;
   };
 
   renderTweets(data);
