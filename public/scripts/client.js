@@ -77,6 +77,11 @@ $(document).ready(function() {
   };
 
   renderTweets(data);
+
+  $("form").submit(function(event) {
+    event.preventDefault();
+    alert("form submitted!");
+  })
 });
 
 /* Notes from mentor session:
