@@ -5,42 +5,7 @@
  */
 
 $(document).ready(function() {
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1652654002002,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1652740402002,
-    },
-    {
-      user: {
-        name: "Theodore",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@theo",
-      },
-      content: {
-        text: "Much ado about nothing",
-      },
-      created_at: 1652740402002,
-    },
-  ];
-
+  
   const createTweetElement = function(tweet) {
     let $tweet =
     `<article class="tweet-container">
@@ -76,8 +41,6 @@ $(document).ready(function() {
     }
   };
 
-  renderTweets(data);
-
   $("form").submit(function(event) {
     event.preventDefault();
     alert("form submitted!");
@@ -85,6 +48,8 @@ $(document).ready(function() {
 
     $.post("http://localhost:8080/tweets", textAreaData)
        .then(result => {
+         $("#tweet-text").val('');
+         loadTweets();
       })
     })
 
@@ -92,9 +57,9 @@ $(document).ready(function() {
     $.get("http://localhost:8080/tweets", function(data) {
       renderTweets(data);
     });
-  }
+  };
+  
   loadTweets();
-
 });
 
 /* Notes from mentor session:
