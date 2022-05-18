@@ -8,7 +8,7 @@ section > form {
 }
 
 label {
-  font-size: medium;
+  font-size: large;
   font-weight: bold;
   text-align: left;
 }
@@ -22,7 +22,7 @@ form > div {
 
 textarea {
   resize: none;
-  font-size: medium;
+  font-size: large;
   background-color: transparent;
   border: none;
   outline: none;
