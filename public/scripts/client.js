@@ -77,8 +77,4 @@ $(document).ready(function() {
   };
 
   renderTweets(data);
-  
-  //console.log($tweet); // to see what it looks like
-  // const $tweet = createTweetElement(tweetData);
-  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 });
