@@ -57,7 +57,7 @@ $(document).ready(function() {
       </section>
       
       <footer class="article-footer">
-        <span>${tweet.created_at}</span>
+        <p>${tweet.created_at}</p>
         <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
