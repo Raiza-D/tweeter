@@ -18,7 +18,7 @@ $(document).ready(function() {
       </header>
 
       <section class="article-body">
-        <p></p>
+        <p>${escape(tweet.content.text)}</p>
       </section>
       
       <footer class="article-footer">
@@ -34,13 +34,19 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function(tweets) {
     $("#tweets-container").empty();
     for (const tweet of tweets) {
-      // const $tweet = createTweetElement(tweet);
-      const tweetVariable = $(createTweetElement(tweet));
-      tweetVariable.find(".article-body p").text(tweet.content.text);
-      $("#tweets-container").prepend(tweetVariable);
+      const $tweet = createTweetElement(tweet);
+      // const tweetVariable = $(createTweetElement(tweet));
+      // tweetVariable.find(".article-body p").text(tweet.content.text);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
