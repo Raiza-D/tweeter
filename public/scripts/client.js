@@ -44,28 +44,6 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    const textAreaValue = $("textarea").val();
-    const booleanValue = Boolean($("textarea").val());
-    const booleanOppositeValue = !$("textarea").val();
-    const booleanValueRevertBack = !!$("textarea").val(); // This double flips. Same boolean value as booleanValue variable
-    console.log("This is the textarea value: ", textAreaValue);
-    console.log("This is the boolean value: ", booleanValue);
-    console.log("This is the opposite boolean value: ", booleanOppositeValue);
-    console.log("We reverted back so it's the same as booleanValue: ", booleanValueRevertBack);
-
-    if (true) {
-      console.log("It's hitting true!");
-    }
-
-    if (false) {
-      console.log("It's hitting FALSE!");
-    }
-
-    if (!false) {
-      console.log("It's hitting TRUE because we have flipped false to true!");
-    }
-
-
     if (!$("textarea").val()) {
       alert("Tweet form cannot be empty!");
       return;
