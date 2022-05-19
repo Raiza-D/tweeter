@@ -22,7 +22,7 @@ $(document).ready(function() {
       </section>
       
       <footer class="article-footer">
-        <p>${tweet.created_at}</p>
+        <p>${timeago.format(new Date(tweet.created_at))}</p>
         <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
