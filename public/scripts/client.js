@@ -18,7 +18,7 @@ $(document).ready(function() {
       </header>
 
       <section class="article-body">
-        <p>${tweet.content.text}</p>
+        <p></p>
       </section>
       
       <footer class="article-footer">
@@ -35,11 +35,23 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
+    $("#tweets-container").empty();
     for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $("#tweets-container").prepend($tweet);
+      // const $tweet = createTweetElement(tweet);
+      const tweetVariable = $(createTweetElement(tweet));
+      tweetVariable.find(".article-body p").text(tweet.content.text);
+      $("#tweets-container").prepend(tweetVariable);
     }
   };
+
+  const loadTweets = function () {
+    $.get("/tweets", function (data) {
+      renderTweets(data);
+    });
+  };
+
+  loadTweets();
+
 
   $("form").submit(function(event) {
     event.preventDefault();
@@ -63,11 +75,4 @@ $(document).ready(function() {
       })
     })
 
-  const loadTweets = function() {
-    $.get("/tweets", function(data) {
-      renderTweets(data);
-    });
-  };
-  
-  loadTweets();
 });
