@@ -37,12 +37,29 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
   $("form").submit(function(event) {
     event.preventDefault();
+
+    const textAreaValue = $("textarea").val();
+    const booleanValue = Boolean($("textarea").val());
+    const booleanOppositeValue = !!$("textarea").val(); // This double flips. Same boolean value
+    // as Line 48
+    console.log("This is the textarea value: ", textAreaValue);
+    console.log("This is the boolean value: ", booleanValue);
+    console.log("This is the opposite boolean value: ", booleanOppositeValue);
+
+    if (true) {
+      console.log("It's hitting true!");
+    }
+
+    if (false) {
+      console.log("It's hitting FALSE!");
+    }
+
 
     if (!$("textarea").val()) {
       alert("Tweet form cannot be empty!");
@@ -56,7 +73,7 @@ $(document).ready(function() {
 
     const textAreaData = $(this).serialize();
 
-    $.post("http://localhost:8080/tweets", textAreaData)
+    $.post("/tweets", textAreaData)
        .then(result => {
          $("#tweet-text").val('');
          loadTweets();
@@ -64,7 +81,7 @@ $(document).ready(function() {
     })
 
   const loadTweets = function() {
-    $.get("http://localhost:8080/tweets", function(data) {
+    $.get("/tweets", function(data) {
       renderTweets(data);
     });
   };
