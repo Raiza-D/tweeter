@@ -43,6 +43,12 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
+
+    if (!$("#tweet-text").val()) {
+      alert("Tweet form cannot be empty!");
+      return;
+    }
+
     const textAreaData = $(this).serialize();
 
     $.post("http://localhost:8080/tweets", textAreaData)
