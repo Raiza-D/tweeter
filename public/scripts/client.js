@@ -61,6 +61,10 @@ $(document).ready(function() {
       console.log("It's hitting FALSE!");
     }
 
+    if (!false) {
+      console.log("It's hitting TRUE because we have flipped false to true!");
+    }
+
 
     if (!$("textarea").val()) {
       alert("Tweet form cannot be empty!");
