@@ -43,7 +43,6 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    alert("form submitted!");
     const textAreaData = $(this).serialize();
 
     $.post("http://localhost:8080/tweets", textAreaData)
