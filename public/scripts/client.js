@@ -44,8 +44,13 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    if (!$("#tweet-text").val()) {
+    if (!$("textarea").val()) {
       alert("Tweet form cannot be empty!");
+      return;
+    }
+    
+    if ($("textarea").val().length > 140) {
+      alert("Tweet length cannot exceed 140 characters!");
       return;
     }
 
