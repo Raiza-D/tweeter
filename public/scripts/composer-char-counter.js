@@ -9,7 +9,6 @@ $(document).ready(function() {
 const onChange = function() {
   const maxLength = 140;
 
-  console.log(this);
   const form = $(this).closest("form"); // Traverse up the DOM tree using closest() and find "form" element. The 'this' refers to the textarea.
 
   const counter = form.find(".counter"); // Then within form element, use find() to grab a "counter" class within the form element.
