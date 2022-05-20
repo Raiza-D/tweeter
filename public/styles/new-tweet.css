@@ -2,9 +2,16 @@ section {
   margin-bottom: 80px;
 }
 
+/* To fix styling bug of Compose Tweet moving up after error msg appears: 
+
+h2 {
+  margin-top: 0px;
+  padding-top: 10px;
+} */
+
 .error-msg p {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 5px solid #FF0000;
   padding: 10px;
   color: #FF0000;
