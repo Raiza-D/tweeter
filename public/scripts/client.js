@@ -57,15 +57,13 @@ $(document).ready(function() {
     $(".error-msg").hide();
     
     if (!$("textarea").val()) {
-      $(".error-msg span").empty().append("Tweet form cannot be empty!");
+      $(".error-msg span").empty().append("Tweet form cannot be empty");
       $(".error-msg").slideDown();
       return;
     }
     
-    // $(".error-msg").slideUp();
-    
     if ($("textarea").val().length > 140) {
-      $(".error-msg span").empty().append("Tweet cannot exceed 140 characters!");
+      $(".error-msg span").empty().append("Tweet exceeds 140 characters");
       $(".error-msg").slideDown();
       return;
     }
