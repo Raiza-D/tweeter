@@ -2,7 +2,7 @@ section {
   margin-bottom: 80px;
 }
 
-section > div > p {
+.error-msg p {
   margin-top: 50px;
   margin-bottom: 50px;
   border: 5px solid #FF0000;
