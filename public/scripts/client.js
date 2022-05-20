@@ -63,7 +63,7 @@ $(document).ready(function() {
     }
     
     if ($("textarea").val().length > 140) {
-      $(".error-msg span").empty().append("Tweet exceeds 140 characters");
+      $(".error-msg span").empty().append("Tweet exceeds 140 characters. Re-submit a shorter tweet.");
       $(".error-msg").slideDown();
       return;
     }
