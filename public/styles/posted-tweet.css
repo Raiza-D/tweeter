@@ -64,6 +64,10 @@ footer > p {
   margin: 0;
 }
 
+.article-footer div {
+  color: #4056A1;
+}
+
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
   color:#c9b940;
   cursor: pointer;
