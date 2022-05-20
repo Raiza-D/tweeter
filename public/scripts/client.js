@@ -61,9 +61,12 @@ $(document).ready(function() {
     }
     
     if ($("textarea").val().length > 140) {
-      alert("Tweet length cannot exceed 140 characters!");
+      // alert("Tweet length cannot exceed 140 characters!");
+      $(".error-msg").slideDown("medium");
       return;
     }
+    
+    $(".error-msg").hide();
 
     const textAreaData = $(this).serialize();
 
