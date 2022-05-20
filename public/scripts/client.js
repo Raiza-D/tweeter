@@ -57,7 +57,6 @@ $(document).ready(function() {
     $(".error-msg").slideUp();
     
     if (!$("textarea").val()) {
-      // alert("Tweet form cannot be empty!");
       $(".error-msg p").empty().append("Tweet form cannot be empty!");
       $(".error-msg").slideDown("medium");
       return;
@@ -65,7 +64,6 @@ $(document).ready(function() {
 
     
     if ($("textarea").val().length > 140) {
-      // alert("Tweet length cannot exceed 140 characters!");
       $(".error-msg p").empty().append("Tweet length cannot exceed 140 characters!");
       $(".error-msg").slideDown("medium");
       return;
