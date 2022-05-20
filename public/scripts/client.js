@@ -54,7 +54,8 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-
+    $(".error-msg").slideUp();
+    
     if (!$("textarea").val()) {
       // alert("Tweet form cannot be empty!");
       $(".error-msg p").empty().append("Tweet form cannot be empty!");
@@ -62,21 +63,22 @@ $(document).ready(function() {
       return;
     }
 
-    $(".error-msg").hide();
     
     if ($("textarea").val().length > 140) {
       // alert("Tweet length cannot exceed 140 characters!");
+      $(".error-msg p").empty().append("Tweet length cannot exceed 140 characters!");
       $(".error-msg").slideDown("medium");
       return;
     }
     
-    $(".error-msg").hide();
+    // $(".error-msg").hide();
 
     const textAreaData = $(this).serialize();
 
     $.post("/tweets", textAreaData)
        .then(result => {
-         $("#tweet-text").val('');
+         $("#tweet-text").val('').trigger("input");
+        //  $("#tweet-text").trigger("input");
          loadTweets();
       })
     })
