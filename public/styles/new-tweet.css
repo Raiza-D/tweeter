@@ -9,6 +9,10 @@ h2 {
   padding-top: 10px;
 } */
 
+.error-msg {
+  display: none;
+}
+
 .error-msg p {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -16,10 +20,6 @@ h2 {
   padding: 10px;
   color: #FF0000;
   font-weight: bold;
-}
-
-.error-msg {
-  display: none;
 }
 
 section > form {
