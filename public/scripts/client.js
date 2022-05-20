@@ -57,7 +57,7 @@ $(document).ready(function() {
     $(".error-msg").hide();
     
     if (!$("textarea").val()) {
-      $(".error-msg p").empty().append("⚠️ Tweet form cannot be empty! ⚠️");
+      $(".error-msg p").empty().append("Tweet form cannot be empty!");
       $(".error-msg").slideDown("medium");
       return;
     }
@@ -65,7 +65,7 @@ $(document).ready(function() {
     // $(".error-msg").slideUp();
     
     if ($("textarea").val().length > 140) {
-      $(".error-msg p").empty().append("⚠️ Tweet cannot exceed 140 characters! ⚠️");
+      $(".error-msg p").empty().append("Tweet cannot exceed 140 characters!");
       $(".error-msg").slideDown("medium");
       return;
     }
