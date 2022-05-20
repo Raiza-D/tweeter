@@ -70,17 +70,12 @@ $(document).ready(function() {
       return;
     }
     
-
     const textAreaData = $(this).serialize();
 
     $.post("/tweets", textAreaData)
        .then(result => {
-         $("#tweet-text").val('');
-         onChange.call($("textarea"));
-         // onChange.call(document.querySelector("textarea"));
-        //  $("#tweet-text").trigger("input");
+         $("#tweet-text").val('').trigger("input");
          loadTweets();
       })
     })
-
 });
