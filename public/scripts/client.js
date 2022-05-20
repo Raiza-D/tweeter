@@ -54,22 +54,22 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    $(".error-msg").slideUp();
+    $(".error-msg").hide();
     
     if (!$("textarea").val()) {
-      $(".error-msg p").empty().append("Tweet form cannot be empty!");
+      $(".error-msg p").empty().append("⚠️ Tweet form cannot be empty! ⚠️");
       $(".error-msg").slideDown("medium");
       return;
     }
-
+    
+    // $(".error-msg").slideUp();
     
     if ($("textarea").val().length > 140) {
-      $(".error-msg p").empty().append("Tweet length cannot exceed 140 characters!");
+      $(".error-msg p").empty().append("⚠️ Tweet cannot exceed 140 characters! ⚠️");
       $(".error-msg").slideDown("medium");
       return;
     }
     
-    // $(".error-msg").hide();
 
     const textAreaData = $(this).serialize();
 
