@@ -56,9 +56,13 @@ $(document).ready(function() {
     event.preventDefault();
 
     if (!$("textarea").val()) {
-      alert("Tweet form cannot be empty!");
+      // alert("Tweet form cannot be empty!");
+      $(".error-msg p").empty().append("Tweet form cannot be empty!");
+      $(".error-msg").slideDown("medium");
       return;
     }
+
+    $(".error-msg").hide();
     
     if ($("textarea").val().length > 140) {
       // alert("Tweet length cannot exceed 140 characters!");
