@@ -2,6 +2,19 @@ section {
   margin-bottom: 80px;
 }
 
+section > div > p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 5px solid #FF0000;
+  padding: 10px;
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.error-msg {
+  display: none;
+}
+
 section > form {
   display: flex;
   flex-direction: column;
