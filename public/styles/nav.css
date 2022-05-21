@@ -27,6 +27,26 @@ nav > span {
   font-size: 20px;
 }
 
-.right-nav-elem > i {
+.compose {
   color: red;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  animation-name: downarrow;
+}
+
+.compose:hover {
+  cursor: pointer;
+  box-shadow: none;
+  animation: downarrow 1s ease-in-out infinite;
+}
+
+@keyframes downarrow {
+  0%,
+  100% {
+    transform: translate(0px, 10px);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
 }
