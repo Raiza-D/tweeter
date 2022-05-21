@@ -5,7 +5,9 @@
  */
 
 $(document).ready(function() {
-  
+
+  $(".new-tweet").hide();
+
   const createTweetElement = function(tweet) {
     let $tweet =
     `<article class="tweet-container">
