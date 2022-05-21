@@ -34,3 +34,22 @@ main {
   text-align: center;
   margin: 0 auto;
 }
+
+.scroll-up {
+  text-align: right;
+}
+
+.scroll-comp {
+  font-size: 30px;
+  padding: 20px 30px 20px 30px;
+  margin: 10px;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+}
+
+.scroll-comp:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
