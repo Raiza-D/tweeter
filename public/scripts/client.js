@@ -79,6 +79,7 @@ $(document).ready(function() {
 
   $(".compose").on("click", function() {
     $(".new-tweet").toggle();
+    $("#tweet-text").focus();
   })
 
 });
