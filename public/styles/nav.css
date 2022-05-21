@@ -32,12 +32,12 @@ nav > span {
   padding-top: 5px;
   padding-bottom: 5px;
   animation-name: downarrow;
+  animation: downarrow 1s ease-in-out infinite;
 }
 
 .compose:hover {
   cursor: pointer;
   box-shadow: none;
-  animation: downarrow 1s ease-in-out infinite;
 }
 
 @keyframes downarrow {
