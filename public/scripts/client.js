@@ -76,4 +76,9 @@ $(document).ready(function() {
          loadTweets();
       })
     })
+
+  $(".compose").on("click", function() {
+    $(".new-tweet").toggle();
+  })
+
 });
