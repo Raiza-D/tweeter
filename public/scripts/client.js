@@ -7,6 +7,7 @@
 $(document).ready(function() {
 
   $(".new-tweet").hide();
+  $(".scroll-comp").hide();
 
   const createTweetElement = function(tweet) {
     let $tweet =
@@ -84,4 +85,12 @@ $(document).ready(function() {
     $("#tweet-text").focus();
   })
 
+  $(window).scroll(function() {
+    $(".scroll-comp").show();
+  });
+
+  $(".scroll-comp").on("click", function() {
+    $(".new-tweet").show();
+    $("#tweet-text").focus();
+  })
 });
