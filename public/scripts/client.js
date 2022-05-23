@@ -46,8 +46,8 @@ $(document).ready(function() {
     }
   };
 
-  const loadTweets = function () {
-    $.get("/tweets", function (data) {
+  const loadTweets = function() {
+    $.get("/tweets", function(data) {
       renderTweets(data);
     });
   };
@@ -89,25 +89,45 @@ $(document).ready(function() {
   // When user scrolls down, the round button appears. The top-right compose button is hidden.
   // When user scrolls up, Compose button top right re-appears. Then the round button disappears.
   
-  let lastScrollTop = 0;
+let startValScrollY = 0;
 
-  $(window).scroll(function(event) {
-    let st = $(this).scrollTop();
-    
-    if (st > lastScrollTop) {
-      console.log("ST no 1: ", st);
-      // downscroll code
-      $(".scroll-comp").show();
-      $(".compose").hide();
-    } else {
-      console.log("ST no 2: ", st);
-      // upscroll code
-      $(".scroll-comp").hide();
-      $(".compose").show();
-    }
-    lastScrollTop = st;
-    console.log(lastScrollTop);
-  });
+$(window).scroll(function(event) {
+  console.log("This is scroll X: ", scrollX); // This is horizontal scroll
+  console.log("This is scroll Y: ", scrollY); // This is vertical scroll
+  console.log("This is scrollTop: ", $(window).scrollTop());
+
+  let scrollTopPosition = $(this).scrollTop();
+  if (scrollTopPosition > startValScrollY) {
+    // When user scrolls down, execute:
+    $(".scroll-comp").show();
+    $(".compose").hide();
+    // When user scrolls up, execute:
+  } else {
+    $(".scroll-comp").hide();
+    $(".compose").show();
+  }
+  startValScrollY = scrollTopPosition;
+})
+
+  // let lastScrollTop = 0;
+
+  // $(window).scroll(function(event) {
+  //   let st = $(this).scrollTop();
+
+  //   if (st > lastScrollTop) {
+  //     console.log("ST no 1: ", st);
+  //     // downscroll code
+  //     $(".scroll-comp").show();
+  //     $(".compose").hide();
+  //   } else {
+  //     console.log("ST no 2: ", st);
+  //     // upscroll code
+  //     $(".scroll-comp").hide();
+  //     $(".compose").show();
+  //   }
+  //   lastScrollTop = st;
+  //   console.log(lastScrollTop);
+  // });
 
 // $(window).scroll(function () {
   // When user scrolls down
