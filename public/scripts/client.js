@@ -80,67 +80,37 @@ $(document).ready(function() {
       })
     })
 
-  // When user clicks on compose button top right. New-tweet section toggle show/hide.
-  $(".compose").on("click", function() {
+  // When user clicks on compose button, toggle show/hide new-tweet form. Text area auto enabled.
+  $(".compose").on("click", function(event) {
     $(".new-tweet").toggle();
     $("#tweet-text").focus();
   })
 
-  // When user scrolls down, the round button appears. The top-right compose button is hidden.
-  // When user scrolls up, Compose button top right re-appears. Then the round button disappears.
-  
-let startValScrollY = 0;
+  // When user scrolls down, scroll-comp button appears; compose hidden.
+  // When user scrolls up, compose button appears. scroll-comp button hidden.  
+  let startValScrollY = 0;
 
-$(window).scroll(function(event) {
-  console.log("This is scroll X: ", scrollX); // This is horizontal scroll
-  console.log("This is scroll Y: ", scrollY); // This is vertical scroll
-  console.log("This is scrollTop: ", $(window).scrollTop());
+  $(window).scroll(function(event) {
+    let scrollTopPosition = $(this).scrollTop();
 
-  let scrollTopPosition = $(this).scrollTop();
-  if (scrollTopPosition > startValScrollY) {
-    // When user scrolls down, execute:
-    $(".scroll-comp").show();
-    $(".compose").hide();
-    // When user scrolls up, execute:
-  } else {
-    $(".scroll-comp").hide();
-    $(".compose").show();
-  }
-  startValScrollY = scrollTopPosition;
-})
+    if (scrollTopPosition > startValScrollY) {
+      // When user scrolls down, execute:
+      $(".scroll-comp").show();
+      $(".compose").hide();
 
-  // let lastScrollTop = 0;
+      // When user scrolls up, execute:
+    } else {
+      $(".scroll-comp").hide();
+      $(".compose").show();
+    }
+    startValScrollY = scrollTopPosition;
+  })
 
-  // $(window).scroll(function(event) {
-  //   let st = $(this).scrollTop();
-
-  //   if (st > lastScrollTop) {
-  //     console.log("ST no 1: ", st);
-  //     // downscroll code
-  //     $(".scroll-comp").show();
-  //     $(".compose").hide();
-  //   } else {
-  //     console.log("ST no 2: ", st);
-  //     // upscroll code
-  //     $(".scroll-comp").hide();
-  //     $(".compose").show();
-  //   }
-  //   lastScrollTop = st;
-  //   console.log(lastScrollTop);
-  // });
-
-// $(window).scroll(function () {
-  // When user scrolls down
-  // $(".scroll-comp").show();
-  // $(".compose").hide();
-// });
-
-  // When user clicks on round button, page auto scrolls to top. New tweet form appears.
-  // Text area enabled automatically.
-  $(".scroll-comp").on("click", function() {
+  // When user clicks on scroll-comp, page auto-scrolls to top. new-tweet form appears,
+  // text area enabled
+  $(".scroll-comp").on("click", function(event) {
     $(".new-tweet").show();
     $("#tweet-text").focus();
   })
-
 
 });
