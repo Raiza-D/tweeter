@@ -87,10 +87,33 @@ $(document).ready(function() {
   })
 
   // When user scrolls down, the round button appears. The top-right compose button is hidden.
-  $(window).scroll(function () {
-    $(".scroll-comp").show();
-    $(".compose").hide();
+  // When user scrolls up, Compose button top right re-appears. Then the round button disappears.
+  
+  let lastScrollTop = 0;
+
+  $(window).scroll(function(event) {
+    let st = $(this).scrollTop();
+    
+    if (st > lastScrollTop) {
+      console.log("ST no 1: ", st);
+      // downscroll code
+      $(".scroll-comp").show();
+      $(".compose").hide();
+    } else {
+      console.log("ST no 2: ", st);
+      // upscroll code
+      $(".scroll-comp").hide();
+      $(".compose").show();
+    }
+    lastScrollTop = st;
+    console.log(lastScrollTop);
   });
+
+// $(window).scroll(function () {
+  // When user scrolls down
+  // $(".scroll-comp").show();
+  // $(".compose").hide();
+// });
 
   // When user clicks on round button, page auto scrolls to top. New tweet form appears.
   // Text area enabled automatically.
@@ -99,6 +122,5 @@ $(document).ready(function() {
     $("#tweet-text").focus();
   })
 
-  // When user scrolls up, Compose button top right re-appears. Then the round button disappears.
 
 });
