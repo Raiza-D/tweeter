@@ -80,17 +80,25 @@ $(document).ready(function() {
       })
     })
 
+  // When user clicks on compose button top right. New-tweet section toggle show/hide.
   $(".compose").on("click", function() {
     $(".new-tweet").toggle();
     $("#tweet-text").focus();
   })
 
-  $(window).scroll(function() {
+  // When user scrolls down, the round button appears. The top-right compose button is hidden.
+  $(window).scroll(function () {
     $(".scroll-comp").show();
+    $(".compose").hide();
   });
 
+  // When user clicks on round button, page auto scrolls to top. New tweet form appears.
+  // Text area enabled automatically.
   $(".scroll-comp").on("click", function() {
     $(".new-tweet").show();
     $("#tweet-text").focus();
   })
+
+  // When user scrolls up, Compose button top right re-appears. Then the round button disappears.
+
 });
