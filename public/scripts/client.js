@@ -6,9 +6,6 @@
 
 $(document).ready(function() {
 
-  $(".new-tweet").hide();
-  $(".scroll-comp").hide();
-
   const createTweetElement = function(tweet) {
     let $tweet =
     `<article class="tweet-container">
@@ -54,7 +51,6 @@ $(document).ready(function() {
 
   loadTweets();
 
-
   $("form").submit(function(event) {
     event.preventDefault();
     $(".error-msg").hide();
@@ -79,38 +75,5 @@ $(document).ready(function() {
          loadTweets();
       })
     })
-
-  // When user clicks on compose button, toggle show/hide new-tweet form. Text area auto enabled.
-  $(".compose").on("click", function(event) {
-    $(".new-tweet").toggle();
-    $("#tweet-text").focus();
-  })
-
-  // When user scrolls down, scroll-comp button appears; compose hidden.
-  // When user scrolls up, compose button appears. scroll-comp button hidden.  
-  let startValScrollY = 0;
-
-  $(window).scroll(function(event) {
-    let scrollTopPosition = $(this).scrollTop();
-
-    if (scrollTopPosition > startValScrollY) {
-      // When user scrolls down, execute:
-      $(".scroll-comp").show();
-      $(".compose").hide();
-
-      // When user scrolls up, execute:
-    } else {
-      $(".scroll-comp").hide();
-      $(".compose").show();
-    }
-    startValScrollY = scrollTopPosition;
-  })
-
-  // When user clicks on scroll-comp, page auto-scrolls to top. new-tweet form appears,
-  // text area enabled
-  $(".scroll-comp").on("click", function(event) {
-    $(".new-tweet").show();
-    $("#tweet-text").focus();
-  })
 
 });
