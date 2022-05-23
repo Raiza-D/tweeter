@@ -22,12 +22,12 @@ $(document).ready(function() {
     if (scrollTopPosition > startValScrollY) {
       // When user scrolls down, execute:
       $(".scroll-comp").show();
-      $(".compose").hide();
+      $(".right-nav-elem").hide();
 
       // When user scrolls up, execute:
     } else {
       $(".scroll-comp").hide();
-      $(".compose").show();
+      $(".right-nav-elem").show();
     }
     startValScrollY = scrollTopPosition;
   });
