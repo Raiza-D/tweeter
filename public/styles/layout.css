@@ -53,3 +53,43 @@ main {
   box-shadow: none;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    background-color: #334354;
+    background-image: url("https://www.transparenttextures.com/patterns/old-husks.png");
+  }
+
+  .desktop-view {
+    display: flex;
+    margin: 250px 50px 50px 50px;
+  }
+
+  header.top-header {
+    width: 500px;
+    height: 400px;
+  }
+
+  .top-header > div > img {
+    padding-top: 0;
+    height: 250px;
+  }
+
+  .top-header h2 {
+    font-size: larger;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  #tweets-container {
+    padding-top: 0;
+  }
+
+  section.new-tweet {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
