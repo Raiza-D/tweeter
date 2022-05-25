@@ -57,16 +57,26 @@ main {
 @media only screen and (min-width: 1024px) {
 
   .desktop-view {
+    width: 90%;
+    margin: 0 5%;
     display: flex;
-    margin: 250px 50px 50px 50px;
   }
+
+  body {
+    margin-top: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
 
   header.top-header {
-    width: 500px;
+    width: 30vw;
     height: 400px;
+    /* margin: 0 8vw; */
   }
 
-  .top-header > div > img {
+  .top-header > img {
     padding-top: 0;
     height: 250px;
   }
@@ -76,7 +86,8 @@ main {
   }
 
   .container {
-    width: 60%;
+    /* width: 50vw; */
+    margin-left: 40px;
   }
 
   #tweets-container {
