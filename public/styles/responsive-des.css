@@ -1,0 +1,49 @@
+/* Codes for responsive design */
+
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    background-color: #4056A1;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  body {
+    margin: 250px 50px 50px 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  header.top-header {
+    width: 30vw;
+    height: 400px;
+  }
+
+  .top-header > img {
+    padding-top: 0;
+    height: 250px;
+  }
+
+  .top-header h2 {
+    font-size: larger;
+  }
+
+  .container {
+    max-width: 60%;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  #tweets-container {
+    padding-top: 0;
+  }
+
+  section.new-tweet {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
