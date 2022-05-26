@@ -47,6 +47,7 @@ textarea {
 
 .post-tweet:hover {
   box-shadow: 0 0 5px #6499e2;
+  cursor: pointer;
 }
 
 output {
