@@ -37,7 +37,7 @@ textarea {
   outline: none;
 }
 
-button {
+.post-tweet {
   font-family: "Bungee", cursive, sans-serif;
   font-size: large;
   background-color: #4056A1;
@@ -45,7 +45,7 @@ button {
   border: 0;
 }
 
-button:hover {
+.post-tweet:hover {
   box-shadow: 0 0 5px #6499e2;
 }
 
