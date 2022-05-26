@@ -6,6 +6,13 @@ Users can create short posts of up to 140 characters and append them to the main
 
 The development of this app involved building upon the existing starter code provided by Lighthouse Labs and allowed practicing HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node.js and Express back-end skills.
 
+## Final Product
+!["Tweeter main view on a desktop window size of 1024px"](https://github.com/Raiza-D/tweeter/blob/master/docs/tweeter-main.png?raw=true)
+
+!["Tweeter responsive design view with nav bar transparent"](https://github.com/Raiza-D/tweeter/blob/master/docs/tweeter-responsive.png?raw=true)
+
+!["Tweeter responsive design view with an error message notifying user the tweet is too long"](https://github.com/Raiza-D/tweeter/blob/master/docs/tweeter-responsive-error.png?raw=true)
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
