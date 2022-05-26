@@ -2,7 +2,9 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Users can create short posts of up to 140 characters and append them to the main page. The tweets are posted in sequential order with the most recent posts appearing at the top of the page. Tweeter fetches a list of posts from a simplified 'server' and allows users to add posts to this list dynamically.
+
+The development of this app involved building upon the existing starter code provided by Lighthouse Labs and allowed practicing HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node.js and Express back-end skills.
 
 ## Getting Started
 
