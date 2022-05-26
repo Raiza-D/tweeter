@@ -19,7 +19,7 @@ The development of this app involved building upon the existing starter code pro
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+4. Go to <http://localhost:8080/> in your browser (preferably Chrome).
 
 ## Dependencies
 
