@@ -1,22 +1,19 @@
-/* This file will be responsible for the character counter feature of our SPA */
 
 $(document).ready(function() {
-  $("textarea").on("input", onChange);
-
   $(".new-tweet").hide();
   $(".scroll-comp").hide();
 
-  // When user clicks on compose button, toggle show/hide new-tweet form. Text area auto enabled.
-  $(".compose").on("click", function (event) {
+  $("textarea").on("input", onChange);
+
+  // When user clicks on compose button, toggle new-tweet form. Textarea auto enabled.
+  $(".compose").on("click", function(event) {
     $(".new-tweet").toggle();
     $("#tweet-text").focus();
   });
 
-  // When user scrolls down, scroll-comp button appears; compose hidden.
-  // When user scrolls up, compose button appears. scroll-comp button hidden.
+  // When user scrolls up or down show/hide compose button & bottom toggle button
   let startValScrollY = 0;
-
-  $(window).scroll(function (event) {
+  $(window).scroll(function(event) {
     let scrollTopPosition = $(this).scrollTop();
 
     if (scrollTopPosition > startValScrollY) {
@@ -32,33 +29,30 @@ $(document).ready(function() {
     startValScrollY = scrollTopPosition;
   });
 
-  // When user clicks on scroll-comp, page auto-scrolls to top. new-tweet form appears,
-  // text area enabled
-  $(".scroll-comp").on("click", function (event) {
+  // When user clicks on bottom toggle button
+  $(".scroll-comp").on("click", function(event) {
     $(".new-tweet").show();
     $("#tweet-text").focus();
   });
 
 });
 
+// Function to update character counter
 const onChange = function() {
   const maxLength = 140;
 
-  const form = $(this).closest("form"); // Traverse up the DOM tree using closest() and find "form" element. The 'this' refers to the textarea.
-
-  const counter = form.find(".counter"); // Then within form element, use find() to grab a "counter" class within the form element.
-
+  const form = $(this).closest("form");
+  const counter = form.find(".counter");
+  
   let inputLength = $("textarea").val().length;
 
   const remainingLength = maxLength - inputLength;
-  counter.text(remainingLength); // Use 'counter' variable and update the remaining character length
+  counter.text(remainingLength);
 
   if (remainingLength < 0) {
-    counter.addClass("red"); // Add class 'red' (which has a colour value of red). This changes the
-    // counter's colour to 'red'.
+    counter.addClass("red");
     return;
   }
 
-  counter.removeClass("red"); // If this code is removed, our counter will be red even if
-  // its value is NOT less than zero.
+  counter.removeClass("red");
 };
