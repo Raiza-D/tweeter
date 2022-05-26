@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 });
 
-// Function to update character counter
+// Function to update character counter. Invoked on Line 6.
 const onChange = function() {
   const maxLength = 140;
 
