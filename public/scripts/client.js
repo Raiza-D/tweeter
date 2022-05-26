@@ -70,10 +70,10 @@ $(document).ready(function() {
     const textAreaData = $(this).serialize();
 
     $.post("/tweets", textAreaData)
-       .then(result => {
-         $("#tweet-text").val('').trigger("input");
-         loadTweets();
-      })
-    })
+      .then(result => {
+        $("#tweet-text").val('').trigger("input");
+        loadTweets();
+      });
+  });
 
 });
