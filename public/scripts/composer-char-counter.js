@@ -6,14 +6,14 @@ $(document).ready(function() {
   $("textarea").on("input", onChange);
 
   // When user clicks on compose button, toggle new-tweet form. Textarea auto enabled.
-  $(".compose").on("click", function(event) {
+  $(".compose").on("click", function() {
     $(".new-tweet").toggle();
     $("#tweet-text").focus();
   });
 
   // When user scrolls up or down show/hide compose button & bottom toggle button
   let startValScrollY = 0;
-  $(window).scroll(function(event) {
+  $(window).scroll(function() {
     let scrollTopPosition = $(this).scrollTop();
 
     if (scrollTopPosition > startValScrollY) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
   });
 
   // When user clicks on bottom toggle button
-  $(".scroll-comp").on("click", function(event) {
+  $(".scroll-comp").on("click", function() {
     $(".new-tweet").show();
     $("#tweet-text").focus();
   });
