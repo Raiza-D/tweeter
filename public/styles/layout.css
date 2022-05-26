@@ -40,6 +40,8 @@ main {
 }
 
 .scroll-comp {
+  background-color: #4056A1;
+  border: none;
   font-size: 30px;
   padding: 20px 30px 20px 30px;
   margin: 10px;
@@ -54,16 +56,24 @@ main {
   cursor: pointer;
 }
 
+.scroll-comp i {
+  color: #FFFFFF;
+}
+
 @media only screen and (min-width: 1024px) {
 
-  .desktop-view {
-    width: 90%;
-    margin: 0 5%;
+  nav {
+    background-color: #4056A1;
+  }
+
+  .wrapper {
+    width: 100%;
+    /* margin: 0 5%; */
     display: flex;
   }
 
   body {
-    margin-top: 250px;
+    margin: 250px 50px 50px 50px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -86,7 +96,10 @@ main {
 
   .container {
     /* width: 50vw; */
-    margin-left: 40px;
+    /* margin-left: 40px; */
+    max-width: 60%;
+    margin: 0;
+    margin-left: auto;
   }
 
   #tweets-container {
